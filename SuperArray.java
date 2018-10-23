@@ -53,7 +53,15 @@ public class SuperArray{
 			return null;
 		}
 		else{
+			String oldstring = data[i];
 			data[i] = String a;
+			return oldstring;
+		}
+	}
+	private void resize(){
+		String[] newarray = new newarray[size() + 1];
+		for (int i = 0; i < data.length; i +=1){
+			
 		}
 	}
 }
