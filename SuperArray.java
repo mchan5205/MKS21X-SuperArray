@@ -90,4 +90,24 @@ public class SuperArray{
 		}
 		return x;
 	}	
+	public void add(int index, String element){
+		if (index < 0 || index > size()){
+			System.out.println(error, index out of range);
+		}
+		else{
+			String[] newarray = new newarray[data.length];
+			for (int i = 0; i < newarray.length; i += 1){
+				if (i < index){
+					newarray[i] = data[i]
+				}
+				if (i = index){
+					newarray[i] = element;
+				}
+				if (i > index){
+					newarray[i + 1] = data[i]
+				}
+			}
+			size += 1;
+		}
+	}
 }
