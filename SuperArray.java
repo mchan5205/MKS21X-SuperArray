@@ -59,9 +59,35 @@ public class SuperArray{
 		}
 	}
 	private void resize(){
-		String[] newarray = new newarray[size() + 1];
+		String[] newarray = new newarray[size() * 2];
 		for (int i = 0; i < data.length; i +=1){
-			
+			newarray[i] = data[i];
 		}
+		data = newarray;
 	}
+	public boolean contains(String target){
+		for (int i  = 0; i < data.length; i += 1){
+			if (data[i].equals(target)){
+				return true;
+			}
+		}
+		return false;
+	}
+	public int indexOf(String target){
+		for (int i = 0; i < data.length; i += 1){
+			if (data[i].equals(target)){
+				return i; 
+			}
+		}
+		return -1;
+	}
+	public int lastIndexOf(String target)P
+		int x = -1;
+		for (int i = 0; i < data.length; i += 1){
+			if (data[i].equals(target)){
+				x = i;
+			}
+		}
+		return x;
+	}	
 }
