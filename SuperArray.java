@@ -130,4 +130,13 @@ public class SuperArray{
 			return removed;
 		}
 	}
+	public boolean remove(String element){
+		if (indexOf(element) == -1){
+			return false;
+		}
+		else{
+			remove(indexOf(element));
+			return true;
+		}
+	}
 }
