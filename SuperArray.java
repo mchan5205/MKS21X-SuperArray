@@ -92,7 +92,7 @@ public class SuperArray{
 	}	
 	public void add(int index, String element){
 		if (index < 0 || index > size()){
-			System.out.println(error, index out of range);
+			System.out.println("error index out of range");
 		}
 		else{
 			String[] newarray = new newarray[data.length];
@@ -108,6 +108,26 @@ public class SuperArray{
 				}
 			}
 			size += 1;
+		}
+	}
+	public String remove(int index){
+		if (index < 0 || index >= size){
+			System.out.println("error index out of range");
+			return null;
+		}
+		else{
+			String removed = data[index];
+			String[] newarray = new newarray[data.length];
+			for (int i = 0; i < data.length; i += 1){
+				if (i < index){
+					newarray[i] = data[i];
+				}
+				if (i >= index){
+					newarray[i] = data[i + 1];
+				}
+			}
+			data = newarray;
+			return removed;
 		}
 	}
 }
