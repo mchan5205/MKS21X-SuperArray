@@ -6,6 +6,8 @@ public class SuperArray{
 		size = 0;
 	}
 	public void clear(){
+		String[] newarray = new String[data.length];
+		data = newarray;
 		size = 0;
 	}
 	public int size(){
@@ -99,6 +101,9 @@ public class SuperArray{
 			System.out.println("error index out of range");
 		}
 		else{
+			if (data.length == size){
+				resize();
+			}
 			String[] newarray = new String[data.length];
 			for (int i = 0; i < newarray.length; i += 1){
 				if (i < index){
