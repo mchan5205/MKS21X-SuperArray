@@ -1,7 +1,7 @@
 public class SuperArray{
 	private String[] data;
 	private int size;
-	public SuperArray{
+	public SuperArray(){
 		data = new String[10];
 		size = 0;
 	}
@@ -15,7 +15,7 @@ public class SuperArray{
 		return size == 0;
 	}
 	public boolean add(String a){
-		if (data.length = size){
+		if (data.length == size){
 			resize();
 		}
 		data[size] = a;
@@ -25,24 +25,25 @@ public class SuperArray{
 	public String toString(){
 		String newstring = "[";
 		for (int i = 0; i < size; i += 1){
-			newstring += data[i];
+			newstring = newstring + data[i];
 			if (i < size - 1){
-				newstring += ", "
+				newstring = newstring + ", ";
 			}
-		}	
+		}
 		newstring += "]";
 		return newstring;
 	}
-	public String toStringDebug{
+	public String toStringDebug(){
 		String newstring = "[";
 		for (int i = 0; i < data.length; i += 1){
 			newstring += data[i];
 			if (i < data.length - 1){
-				newstring += ", "
+				newstring += ", ";
 			}
-		}	
+		}
 		newstring += "]";
 		return newstring;
+	}
 	public String get(int i){
 		if (i < 0 || i >= size()){
 			return null;
@@ -57,12 +58,12 @@ public class SuperArray{
 		}
 		else{
 			String oldstring = data[i];
-			data[i] = String a;
+			data[i] = a;
 			return oldstring;
 		}
 	}
 	private void resize(){
-		String[] newarray = new newarray[size() * 2];
+		String[] newarray = new String[size() * 2];
 		for (int i = 0; i < data.length; i +=1){
 			newarray[i] = data[i];
 		}
@@ -79,12 +80,12 @@ public class SuperArray{
 	public int indexOf(String target){
 		for (int i = 0; i < data.length; i += 1){
 			if (data[i].equals(target)){
-				return i; 
+				return i;
 			}
 		}
 		return -1;
 	}
-	public int lastIndexOf(String target)P
+	public int lastIndexOf(String target){
 		int x = -1;
 		for (int i = 0; i < data.length; i += 1){
 			if (data[i].equals(target)){
@@ -92,22 +93,22 @@ public class SuperArray{
 			}
 		}
 		return x;
-	}	
+	}
 	public void add(int index, String element){
 		if (index < 0 || index > size()){
 			System.out.println("error index out of range");
 		}
 		else{
-			String[] newarray = new newarray[data.length];
+			String[] newarray = new String[data.length];
 			for (int i = 0; i < newarray.length; i += 1){
 				if (i < index){
-					newarray[i] = data[i]
+					newarray[i] = data[i];
 				}
-				if (i = index){
+				if (i == index){
 					newarray[i] = element;
 				}
 				if (i > index){
-					newarray[i + 1] = data[i]
+					newarray[i + 1] = data[i];
 				}
 			}
 			size += 1;
@@ -120,7 +121,7 @@ public class SuperArray{
 		}
 		else{
 			String removed = data[index];
-			String[] newarray = new newarray[data.length];
+			String[] newarray = new String[data.length];
 			for (int i = 0; i < data.length; i += 1){
 				if (i < index){
 					newarray[i] = data[i];
